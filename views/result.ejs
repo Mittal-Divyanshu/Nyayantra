@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="/result.css">
+</head>
+<body>
+    <div class="container">
+        <center>
+        <div class="book">
+            <div class="cover">
+                <% if (Legal) { %>
+                    <h1><%= Legal.name %></h1>
+                <% } else { %>
+                    <p>No term found. Please try a different search.</p>
+                <% } %>
+            </div>
+            <div class="inner-content">
+                <% if (Legal) { %>
+                    <p><strong>Meaning:</strong> <%= Legal.meaning %></p>
+                    <p><strong>Info:</strong><%=Legal.info%></p>
+                <% } %>
+            </div>
+        </div>
+        <a href="/dictionary">Go Back to Dictionary</a>
+    </div>
+</center>
+</body>
+</html>

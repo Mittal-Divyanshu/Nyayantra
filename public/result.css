@@ -1,0 +1,120 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://wallup.net/wp-content/uploads/2015/12/182680-blurred-books-depth_of_field-vintage-748x468.jpg);
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Book Component Styling */
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 12px #000;
+    perspective: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Cover Styling */
+.cover {
+    position: absolute;
+    top: 0;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform-origin: 0;
+    box-shadow: 1px 1px 12px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure cover is on top */
+}
+
+/* Inner Content Styling */
+.inner-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s;
+}
+
+/* Book Hover Effect */
+.book:hover .cover {
+    transform: rotateY(-87deg);
+}
+
+.book:hover .inner-content {
+    opacity: 1; /* Show inner content on hover */
+}
+
+/* Typography Styling */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+strong {
+    color: #34495e;
+}
+
+/* Link Styling */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #2980b9;
+    color: white;
+}

@@ -1,0 +1,90 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dictionary - NyaYantra</title>
+    <link rel="stylesheet" href="/dictionary.css" />
+  </head>
+  <body>
+    <!-- Search Bar -->
+    <div class="search-container">
+      <form action="/dictionary/search" method="POST">
+        <input
+          type="text"
+          id="searchInput"
+          name="term"
+          placeholder="Search for legal words..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+      <h1
+        style="
+          color: white;
+          text-align: center;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        "
+      >
+        Word of the Day
+      </h1>
+      <!-- Slide 1 -->
+      <div class="mySlides fade">
+        <div class="text">Quorum</div>
+        <p style="font-size: 35px">
+          Quorum refers to the minimum number of members required to be present
+          in a meeting or assembly for the proceedings to be valid. Without the
+          required quorum, decisions made or actions taken during the meeting
+          are not legally binding.
+        </p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="mySlides fade">
+        <div class="text">Quorum in the Indian Constitution</div>
+        <p >
+         <ul style="font-size: 32px;">
+            <li>Article 100 of the Constitution specifies the quorum needed for either
+            House of Parliament (Lok Sabha or Rajya Sabha) to conduct business. It
+            states that the quorum shall be one-tenth of the total number of
+            members of the House.</li>
+            <br>
+            <li> If the quorum is not met, the House cannot
+            proceed with its business, and either the session is adjourned or the
+            meeting is postponed until the required number of members are present.</li>
+        </ul>
+        </p>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="mySlides fade">
+        <div class="text"> The Quorum Crisis</div>
+        <p>
+            <ul style="font-size: 32px;">
+                <li>During the debate on Punjab Disturbances (Amritsar) Bill, it was noticed that there were insufficient members present in the Assembly to meet the quorum requirement (then specified under the Government of India Act, 1935)</li>
+                <br>
+               <li>As a result, the Speaker of the Assembly had to adjourn the session since there was no quorum.</li>
+            </ul>
+        </p>
+      </div>
+
+      <!-- Next and Previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots for Slide Navigation -->
+    <div style="text-align: center; margin-top: 1000px">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script src="/dictionary.js"></script>
+  </body>
+</html

@@ -1,0 +1,121 @@
+/* Style the search bar */
+body {
+    background-image: url(https://wallpaperaccess.com/full/9915915.jpg);
+    background-size: cover;  /* Ensures the image covers the entire screen */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    background-attachment: fixed;  /* Keeps the background image fixed when scrolling */
+    height: 100vh;  /* Makes sure the body is at least the height of the viewport */
+    margin: 0;  /* Removes default margin */
+    padding: 0;
+}
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.search-container input {
+    padding: 10px;
+    width: 350px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: rgba(193, 118, 14, 0.9);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    width: 1200px; /* Adjust the width to increase the slide area */
+    height: 500px; /* Adjust the height to increase slide area */
+    position: relative;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Add background for better readability */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center; /* Ensure it is centered */
+}
+
+/* Style for the text in the slides */
+.text {
+    font-size: 48px;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    line-height: 1.5;
+    font-family: cursive;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots (for slide navigation) */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4 } 
+    to { opacity: 1 }
+}
