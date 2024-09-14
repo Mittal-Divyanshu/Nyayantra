@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution Quiz</title>
+    <link rel="stylesheet" href="/game.css">
+</head>
+<body>
+    <h1>Constitution Quiz</h1>
+
+    <form id="quizForm" action="/quiz/<%= index %>/submit" method="POST">
+        <h3><%= question.question %></h3>
+        <% question.options.forEach((option) => { %>
+            <div>
+                <label>
+                    <input type="radio" name="answer" value="<%= option %>" 
+                        <% if (option === question.correctAnswer) { %>
+                            data-correct-answer="true"
+                        <% } %>
+                    />
+                    <%= option %>
+                </label>
+            </div>
+        <% }) %>
+    
+        <% if (index === total - 1) { %>
+            <button type="submit">Submit</button>
+        <% } else { %>
+            <button id="nextButton" type="button" style="display:none;">Next Question</button>
+        <% } %>
+    </form>
+    
+    
+    
+
+    <!-- Pass correct answer to JS -->
+    <script>
+        const correctAnswer = "<%= question.correctAnswer %>".trim(); // Make sure the correct answer is passed
+    </script>
+
+    <script src="/game.js"></script>
+</body>
+</html>
