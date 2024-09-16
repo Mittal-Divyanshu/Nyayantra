@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     const parentLabel = option.parentElement;
 
                     if (option.getAttribute('data-correct-answer') === 'true') {
-                        parentLabel.style.color = 'green'; // Correct answer
+                        parentLabel.style.color = '#32CD32'; // Lime Green
+                        parentLabel.style.fontWeight = 'bold'; // Make the text bold
+                        
                     } else if (option.checked) {
                         parentLabel.style.color = 'red'; // Incorrect selected answer
                     } else {

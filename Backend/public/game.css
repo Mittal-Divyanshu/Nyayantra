@@ -1,43 +1,97 @@
-/* public/styles.css */
-body {
-    font-family: 'Arial', sans-serif;
+/* Ensure the entire page covers full height */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Georgia', serif;
+    color: #f0f0f0; /* Light text color for contrast */
 }
 
+/* Apply a darker overlay to enhance readability while complementing the background image */
+body {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Dark gradient overlay */
+        url('https://media.istockphoto.com/id/1044578220/photo/law-legal-legislation.jpg?s=612x612&w=0&k=20&c=zNt_VSp-NZ9o-KJMR46pYRIQ-8IF57Upn3eq1sssloo='); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Style for the main heading */
 h1 {
     text-align: center;
     padding: 20px;
-    background-color: #3498db;
-    color: white;
+    background-color: rgba(40, 40, 40, 0.8); /* Dark semi-transparent background */
+    color: #F4C542; /* Light gold color */
+    border-bottom: 3px solid #F4C542; /* Gold border */
+    font-size: 36px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
+/* Style the quiz form container */
 form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(30, 30, 30, 0.8); /* Dark form background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    color: #f0f0f0; /* Light text color */
 }
 
+/* Question heading */
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #F4C542; /* Light gold color */
+}
+
+/* Style for each quiz option */
 div {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-button {
+label {
     display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 4px;
+    background-color: rgba(50, 50, 50, 0.8); /* Darker label background */
+    transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
 }
 
+/* Hover effect for quiz options */
+label:hover {
+    background-color: rgba(70, 70, 70, 0.9); /* Slightly lighter dark background on hover */
+}
+
+/* Customize radio buttons */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Button styling */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #F4C542; /* Light gold color */
+    color: #333; /* Dark text for contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
 button:hover {
-    background-color: #2980b9;
+    background-color: #D4A22A; /* Darker gold */
+}
+
+/* Add padding for better spacing */
+input[type="radio"] {
+    margin-right: 10px;
 }

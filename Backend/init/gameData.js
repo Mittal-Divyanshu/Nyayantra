@@ -3,10 +3,16 @@ const Quiz = require('../model/game'); // Assuming you have your Quiz model
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/constitution";
 
-mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log("Connected to MongoDB"))
-    .catch(err => console.log(err));
+async function main() {
+    try {
+        await mongoose.connect(MONGO_URL);
+        console.log("Connected to MongoDB");
+    } catch (err) {
+        console.error("Error connecting to MongoDB:", err);
+    }
+}
 
+main();
 const quizData = [
     {
         question: "What does the Constitution do?",

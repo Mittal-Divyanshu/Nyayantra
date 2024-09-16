@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    /* background: linear-gradient(to bottom, #ff9933 0%, #f4f4f4 50%,#138808 100%); */
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.vzPelHOdTPUbbwWgo_5_2wHaFj&pid=Api&P=0&h=180);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Makes sure the image covers the entire background */
+    background-position: center; 
+}
+
+/* Navbar */
+nav {
+    background-color: #0078d4;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Rights Details Container */
+.right-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    position: relative;
+}
+
+/* Indian Flag Border */
+.right-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: linear-gradient(to right, #ff9933 33.33%, #138808 33.33% 66.66%, #ffffff 66.66%);
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: 0 0 0 5px #000080;
+}
+
+/* Title */
+.right-content h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+    border-bottom: 2px solid #0078d4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Description */
+.right-content p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .right-content {
+        padding: 15px;
+    }
+
+    .right-content h1 {
+        font-size: 1.5em;
+    }
+
+    .right-content p {
+        font-size: 1em;
+    }
+}

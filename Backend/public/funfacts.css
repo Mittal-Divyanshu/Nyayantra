@@ -1,0 +1,64 @@
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background-image: url(https://p.turbosquid.com/ts-thumb/tz/j31QrT/VN/a11/jpg/1623958561/1920x1080/fit_q87/76fd7a06ccd70477eff57b13cb3ca884e9118e28/a11.jpg);
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image in the viewport */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    height: 90vh; /* Full viewport height */
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+/* Centered text area */
+.centered-content {
+    text-align: center;
+    max-width: 800px;
+    color: #333; /* Adjust text color for better contrast */
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+    padding: 30px; /* Increased padding for a spacious look */
+    border-radius: 15px; /* Rounder corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: background-color 0.5s ease, transform 0.3s ease; /* Smooth transition effects */
+    font-weight: 500;
+}
+
+/* Hover effect for parchment color */
+.centered-content:hover {
+    background-color: rgb(238, 220, 176); /* Change background color on hover */
+    color: black; /* Change text color to black on hover for better contrast */
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+/* Typing container */
+.typing-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent white */
+    padding: 30px; /* Increased padding */
+    border-radius: 15px; /* Rounder corners */
+    max-width: 80%; /* Responsive width */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin: 20px auto; /* Center the container */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5rem; /* Larger font size for emphasis */
+    color: #333; /* Dark color for contrast */
+    
+    width: fit-content;
+    margin: 0 auto; /* Center the h1 element */
+    overflow: hidden; /* Prevent text overflow */
+    white-space: nowrap; /* Keep text in one line */
+    display: inline-block; /* Ensure the block fits in container */
+    word-wrap: break-word; /* Handle long words */
+    line-height: 1.5;
+}
+

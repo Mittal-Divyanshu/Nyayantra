@@ -1,0 +1,87 @@
+/* Ensure the entire page covers full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    color: #f0f0f0; /* Light text color for contrast */
+}
+
+/* Apply a darker overlay to enhance readability while complementing the background image */
+body {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Darker gradient overlay for readability */
+        url('https://media.istockphoto.com/id/912932534/photo/results-wooden-letters-on-the-office-desk-informative-and-communication-background.jpg?s=612x612&w=0&k=20&c=zSThUv4f1Px7yj6uCsabeuPrqNyQqjqprj_Zl3BQglc='); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Style for the main heading */
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.8); /* Darker background for better contrast */
+    color: #F9D65C; /* Light, warm gold color */
+    border-bottom: 3px solid #F9D65C; /* Warm gold border */
+    font-size: 36px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Style the result container */
+.result-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background to complement the image */
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Softer shadow for a more elegant look */
+    color: #f0f0f0; /* Light text color */
+}
+
+/* Heading for result page */
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #F9D65C; /* Light, warm gold color for headings */
+}
+
+/* Progress bar styling */
+.progress-bar {
+    width: 100%;
+    background-color: rgba(60, 60, 60, 0.8); /* Dark gray background */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 20px;
+    background-color: #F9D65C; /* Light, warm gold color */
+    transition: width 0.5s;
+}
+
+/* Result message styling */
+.result-message {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #E0E0E0; /* Light gray color for better readability */
+    font-weight: 500; /* Slightly bolder text */
+}
+/* Button styling */
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: #F9D65C; /* Light, warm gold color */
+    color: #333; /* Dark text for contrast */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #D4A22A; /* Slightly darker gold */
+}

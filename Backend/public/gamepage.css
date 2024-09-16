@@ -1,0 +1,123 @@
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1ef; /* Light background to keep the page bright */
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    background-color: #6d3f2e; /* Reddish-brown background for the header */
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav .logo {
+    color: #fdfdfd; /* Light text color for the logo */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fdfdfd; /* Light text color for nav links */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #4f2c1d; /* Darker reddish-brown for hover */
+    border-radius: 5px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #6d3f2e; /* Reddish-brown for the heading */
+    margin-bottom: 30px;
+}
+
+/* Game Card Container */
+.game-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Game Card Styles */
+.game-card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Card width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.game-image {
+    height: 180px; /* Height of the image section */
+    background-size: cover;
+    background-position: center;
+}
+
+.game-info {
+    padding: 20px;
+}
+
+.game-info h2 {
+    font-size: 1.5rem;
+    color: #6d3f2e; /* Reddish-brown for the card title */
+    margin-bottom: 10px;
+}
+
+.game-info p {
+    font-size: 1rem;
+    color: #6d3f2e; /* Reddish-brown for the card description */
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8c5e4a; /* Light reddish-brown for the button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5f3a29; /* Darker reddish-brown for hover effect */
+    transform: translateY(-2px);
+}

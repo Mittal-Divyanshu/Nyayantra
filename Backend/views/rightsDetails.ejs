@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= right.title %> - NyaYantra</title>
+    <link rel="stylesheet" href="/rightsDetails.css">
+</head>
+<body>
+   
+    <!-- Right details content -->
+    <div class="right-content">
+        <h1><%= right.title %></h1>
+        <p><%= right.description %></p>
+
+        <!-- Details section -->
+        <% if (right.details && right.details.length > 0) { %>
+            <div class="right-details">
+                <h2>Details</h2>
+                <ul>
+                    <% right.details.forEach(detail => { %>
+                        <li>
+                            <h3><%= detail.articleTitle %></h3>
+                            <p><%= detail.articleDescription %></p>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

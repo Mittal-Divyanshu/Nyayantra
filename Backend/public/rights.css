@@ -1,0 +1,111 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    background-image: url(https://wallpaperaccess.com/full/1896134.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
+    height: 100vh; /* Full height for centering */
+    margin: 0; /* Remove default margin */
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Flexbox container for rights categories */
+  .rights-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .right-category {
+    background-color: #fff;
+    width: 220px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 15px;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .right-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 0.4s ease;
+    transform: scale(0);
+  }
+  
+  .right-category:hover::before {
+    transform: scale(1);
+  }
+  
+  .right-category:hover {
+    background-image: linear-gradient(to bottom, #FF9933, #FFFFFF, #138808); /* Indian Flag Tricolor */
+    color: white;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .right-category a {
+    color: inherit; /* Keeps the default color */
+    text-decoration: none;
+    z-index: 1;
+  }
+  
+  /* Animation for hover effect */
+  .right-category:hover a {
+    color: white; /* Change text color to white on hover */
+  }
+  
+  /* Change text color to black on hover */
+  .right-category:hover a {
+    color: black; /* Change text color to black on hover */
+  }
+  
+  /* Media queries for responsiveness */
+  @media screen and (max-width: 768px) {
+    .right-category {
+        width: 45%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .right-category {
+        width: 90%;
+    }
+  }

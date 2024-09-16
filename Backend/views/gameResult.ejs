@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Results</title>
-    <link rel="stylesheet" href="/game.css">
+    <link rel="stylesheet" href="/gameResult.css">
 </head>
 <body>
     <h1>Quiz Results</h1>
-    <p>Your Score: <%= score %> out of <%= totalQuestions %></p>
+    
+    <div class="result-container">
+        <h2>Your Score: <%= score %> out of <%= totalQuestions %></h2>
 
-    <a href="/">Go Back to Home</a>
-    <a href="/quiz">Try Again</a>
-</body>
-</html>
+        <!-- Progress Bar to visualize the score -->
+        <div class="progress-bar">
+            <div class="progress" style="width: calc(<%= score / totalQuestions * 100 %>%)"></div>
+        </div>
+
+        <!-- Display encouraging message based on score -->
+        <p class="result-message">
+            <% if (score / totalQuestions > 0.8) { %>
+                Great job! You really know the Constitution!
+            <% } else if (score / totalQuestions > 0.5) { %>
+                Good effort! Keep learning!
+            <% } else { %>
+                Don't worry! Try again and improve your knowledge!
+            <% } %>
+        </p>
+
+        <a href="/quiz" class="btn">Try Again</a>
+        <a href="/" class="btn">Back to Home</a>
+    </div>
