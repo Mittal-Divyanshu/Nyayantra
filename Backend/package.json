@@ -1,10 +1,14 @@
 {
   "dependencies": {
     "body-parser": "^1.20.3",
+    "connect-flash": "^0.1.1",
     "ejs": "^3.1.10",
     "express": "^4.20.0",
     "express-session": "^1.18.0",
-    "mongoose": "^8.6.2"
+    "mongoose": "^8.6.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^8.0.0"
   },
   "name": "nyayantra",
   "version": "1.0.0",

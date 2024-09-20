@@ -8,7 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Navigation Bar */
@@ -89,6 +89,7 @@ nav .profile-section {
     align-items: center;
 }
 
+/* Profile icon */
 nav .profile-section img {
     width: 40px;
     height: 40px;
@@ -116,6 +117,10 @@ nav .small-images img {
     border-radius: 35%; /* Circular images */
 }
 
+.pro{
+    margin-left: -15px;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     nav ul {
@@ -133,11 +138,8 @@ nav .small-images img {
     }
 }
 
-
-
 /* Slideshow container full viewport */
 .slideshow-container {
-   
     max-width: 100%;
     height: 100vh; /* Full viewport height */
     position: relative;
@@ -147,7 +149,6 @@ nav .small-images img {
 
 /* Style for the images */
 .mySlides img {
-   
     width: 100vw; /* Full viewport width */
     height: 710px; /* Full viewport height */
     object-fit: cover; /* Ensures the image covers the container without distortion */
@@ -221,6 +222,7 @@ nav .small-images img {
     from {opacity: 0.4} 
     to {opacity: 1}
 }
+
 /* Footer */
 footer {
     background-color: #654520; /* Match with the navigation bar color */
@@ -284,4 +286,71 @@ footer {
 .footer-bottom {
     margin-top: 20px;
     font-size: 14px;
+}
+
+/* Profile Section */
+nav .profile-section {
+    position: relative; /* Make sure profile-menu is positioned relative to profile-section */
+    display: flex;
+    align-items: center;
+}
+
+/* Profile icon */
+nav .profile-section img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+nav .profile-section img:hover {
+    border: 2px solid #28a745;
+}
+
+/* Profile Menu Styles */
+.profile-menu {
+    display: none; /* Hide the menu initially */
+    position: absolute;
+    right: 0; /* Align to the right of the profile icon */
+    top: 50px; /* Adjust according to your layout */
+    background-color: #857159;
+    border: 1px solid #ddd; /* Border for the menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the menu */
+    border-radius: 4px; /* Rounded corners for the menu */
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: 250px; /* Adjust width if needed */
+    padding: 10px; /* Add padding for better spacing */
+}
+
+/* Display the menu when active */
+.profile-menu.active {
+    display: block;
+}
+
+/* Menu items */
+.profile-menu a {
+    display: flex; /* Use flexbox to align icon and text */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Padding for spacing */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.profile-menu a img {
+    width: 24px; /* Adjust the size of the profile icon */
+    height: 24px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.profile-menu a:hover {
+    background-color: black;
+}
+
+.profile-menu h2 {
+    margin: 0 0 10px 0; /* Remove top margin and add bottom margin */
+    color: white;
+    text-align: center;
 }

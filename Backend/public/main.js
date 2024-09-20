@@ -35,3 +35,28 @@ function showSlides() {
     // Change slide every 10 seconds (10000 ms)
     setTimeout(showSlides, 10000);  
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const profileIcon = document.querySelector('.profile-section img');
+    const profileMenu = document.querySelector('.profile-menu');
+
+    // Function to toggle the profile menu visibility
+    function toggleProfileMenu(event) {
+        event.preventDefault();
+        // Toggle the "active" class on the profile menu
+        profileMenu.classList.toggle('active');
+    }
+
+    // Function to hide the profile menu if clicking outside of it
+    function handleClickOutside(event) {
+        if (!profileMenu.contains(event.target) && event.target !== profileIcon) {
+            profileMenu.classList.remove('active');
+        }
+    }
+
+    // Add click event listener to the profile icon
+    profileIcon.addEventListener('click', toggleProfileMenu);
+
+    // Add click event listener to the document to detect clicks outside the profile menu
+    document.addEventListener('click', handleClickOutside);
+});

@@ -1,0 +1,64 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #0073e6, #b3c6ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Game container */
+.game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95); /* Slightly more opaque for better readability */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: #138808;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#wheel {
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Wheel shadow */
+}
+
+#spin-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#spin-button:hover {
+    background-color: #ff9933;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: #333;
+}

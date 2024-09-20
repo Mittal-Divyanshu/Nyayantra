@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://wallpaperaccess.com/full/1793745.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Full height for centering */
+    margin: 0; /* Remove default margin */
+
+    display: flex; /* Enable flexbox */
+
+
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    background:rgb(200,138,52,0.9); /* Semi-transparent white background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Slightly darker shadow for better visibility */
+}
+
+h2 {
+
+    text-align: center;
+    color: #333; /* Darker text color for better contrast */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Add border for inputs */
+    border-radius: 5px; /* Rounded borders for inputs */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+p {
+    text-align: center;
+}

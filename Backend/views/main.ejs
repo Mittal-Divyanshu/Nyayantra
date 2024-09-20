@@ -6,97 +6,169 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>NyaYantra</title>
     <link rel="stylesheet" href="main.css">
-    
+    <style>
+        /* Flash Messages Styling */
+        #flash-messages {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+            display: none; /* Hide by default */
+            opacity: 1;
+            transition: opacity 0.6s ease-out; /* Smooth fade-out effect */
+        }
+
+        .alert {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
 </head>
 <body>
+    <!-- Flash Messages -->
+    <div id="flash-messages">
+        <% if (success_messages.length > 0) { %>
+            <div class="alert alert-success">
+                <% success_messages.forEach(function(message) { %>
+                    <p><%= message %></p>
+                <% }); %>
+            </div>
+        <% } %>
+
+        <% if (danger_messages.length > 0) { %>
+            <div class="alert alert-danger">
+                <% danger_messages.forEach(function(message) { %>
+                    <p><%= message %></p>
+                <% }); %>
+            </div>
+        <% } %>
+    </div>
+
     <!-- Navigation Bar -->
     <nav>
         <!-- Logo -->
         <div class="logo" style="font-family: cursive;">
-                    NyaYantra
+            NyaYantra
             <!-- Small images next to logo -->
             <div class="small-images">
-                
                 <img src="https://w0.peakpx.com/wallpaper/1018/1009/HD-wallpaper-emlem-emblem-indian-king-ashoka-lion-proud-satyamev-jayate.jpg" alt="Image 3">
             </div>
         </div>
 
-        <!-- Menu Toggle for Mobile (Optional) -->
-      
-
         <!-- Navigation Links -->
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="gamepage">Games</a></li>
-            <li><a href="dictionary">Dictionary</a></li>
-            <li><a href="#chatbot">Chatbot</a></li>
+            <li><a href="gamepage">GameHub</a></li>
+            <li><a href="dictionary">Nyaykosh</a></li>
+            <li><a href="#chatbot">Sarojini</a></li>
             <li class="dropdown">
-                <a href="/rights">Category Rights</a>
+                <a href="/rights">Thread of Rights</a>
                 <div class="dropdown-content">
                     <a href="/rights">Rights</a>
                     <a href="#duties">Duties</a>
                 </div>
             </li>
-            <li><a href="/funfacts">Fun Facts</a></li>
+            <li><a href="/funfacts">Legal Lollipops</a></li>
         </ul>
 
         <!-- Profile Section -->
         <div class="profile-section">
-            <a href="#profile"><img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="Profile"></a> <!-- Replace with actual profile image URL -->
+            <a href="#" id="profile-icon" onclick="toggleProfileMenu()">
+                <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="Profile">
+            </a>
+            <!-- Dropdown Menu -->
+            <div class="profile-menu" id="profile-menu">
+                <h2>Hi, Leaders</h2>
+                <a href="#profile" class="pro">
+                    <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="Profile"> Profile
+                </a>
+                <a href="/login">Login</a>
+                <a href="#details">Leaderboard</a>
+                <a href="/logout">Logout</a>
+            </div>
         </div>
     </nav>
+
+    <!-- Slideshow -->
     <div class="slideshow-container">
         <!-- Slide 1 -->
         <div class="mySlides fade">
-            <img src="https://quotefancy.com/media/wallpaper/3840x2160/440907-Abraham-Lincoln-Quote-Democracy-is-government-of-by-and-for-the.jpg" > <!-- Replace with your image -->
-            
+            <img src="https://quotefancy.com/media/wallpaper/3840x2160/440907-Abraham-Lincoln-Quote-Democracy-is-government-of-by-and-for-the.jpg" alt="Abraham Lincoln Quote">
         </div>
 
         <!-- Slide 2 -->
         <div class="mySlides fade">
-            <img src="https://quotefancy.com/media/wallpaper/1600x900/1013377-John-Marshall-Quote-A-legislative-act-contrary-to-the-Constitution.jpg" alt="""> <!-- Replace with your image -->
-           
+            <img src="https://quotefancy.com/media/wallpaper/1600x900/1013377-John-Marshall-Quote-A-legislative-act-contrary-to-the-Constitution.jpg" alt="John Marshall Quote">
         </div>
 
         <!-- Slide 3 -->
         <div class="mySlides fade">
-            <img src="https://images.assettype.com/bloombergquint%2F2019-01%2F2855e3cc-f653-49a9-af93-f5253835ac2c%2FSIGNING_OF_THE_CONSTITUTION_2.jpg?auto=format%2Ccompress&w=1200" alt="Image 3"> <!-- Replace with your image -->
-            
+            <img src="https://images.assettype.com/bloombergquint%2F2019-01%2F2855e3cc-f653-49a9-af93-f5253835ac2c%2FSIGNING_OF_THE_CONSTITUTION_2.jpg?auto=format%2Ccompress&w=1200" alt="Signing of the Constitution">
         </div>
 
-        <!-- Next and previous buttons -->
+        <!-- Next and Previous Buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <!-- The dots/circles -->
-    <div style="text-align:center; margin-top: 0px;">
+    <!-- Dots/Circles -->
+    <div style="text-align:center; margin-top: 10px;">
         <span class="dot" onclick="currentSlide(1)"></span> 
         <span class="dot" onclick="currentSlide(2)"></span> 
         <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-socials"></div>
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-                <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
-                <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+        <div class="footer-container">
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn"></a>
+                </div>
             </div>
         </div>
-    
-    <div class="footer-bottom">
-        <p>&copy; 2024 NyaYantra. All rights reserved.</p>
-    </div>
-</footer>
-    
-
-
-    <!-- Main Content -->
-   
+        <div class="footer-bottom">
+            <p>&copy; 2024 NyaYantra. All rights reserved.</p>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript to handle mobile menu toggle -->
-  <script src="main.js">  </script>
+    <script src="main.js"></script>
+
+    <!-- JavaScript for Flash Messages -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const flashMessages = document.getElementById('flash-messages');
+            if (flashMessages && flashMessages.innerHTML.trim() !== '') {
+                flashMessages.style.display = 'block'; // Show flash messages
+
+                setTimeout(() => {
+                    flashMessages.style.opacity = '0';
+                    setTimeout(() => {
+                        flashMessages.style.display = 'none'; // Hide flash messages after fade out
+                    }, 600); // Match this time with CSS transition duration
+                }, 3000); // Flash message duration (e.g., 5 seconds)
+            }
+        });
+    </script>
 </body>
 </html>

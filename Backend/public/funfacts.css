@@ -1,6 +1,6 @@
 body {
     font-family: 'Georgia', 'Times New Roman', Times, serif;
-    background-image: url(https://p.turbosquid.com/ts-thumb/tz/j31QrT/VN/a11/jpg/1623958561/1920x1080/fit_q87/76fd7a06ccd70477eff57b13cb3ca884e9118e28/a11.jpg);
+    background-image: url('https://p.turbosquid.com/ts-thumb/tz/j31QrT/VN/a11/jpg/1623958561/1920x1080/fit_q87/76fd7a06ccd70477eff57b13cb3ca884e9118e28/a11.jpg');
     background-size: cover; /* Ensures the image covers the entire viewport */
     background-position: center; /* Centers the image in the viewport */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -31,7 +31,7 @@ body {
 
 /* Hover effect for parchment color */
 .centered-content:hover {
-    background-color: rgb(238, 220, 176); /* Change background color on hover */
+    background-color: rgb(243, 226, 185); /* Change background color on hover */
     color: black; /* Change text color to black on hover for better contrast */
     transform: scale(1.02); /* Slightly scale up on hover */
 }
@@ -61,4 +61,3 @@ h1 {
     word-wrap: break-word; /* Handle long words */
     line-height: 1.5;
 }
-

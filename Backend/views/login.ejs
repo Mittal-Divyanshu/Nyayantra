@@ -1,0 +1,54 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/signup.css"> <!-- Link to your CSS file -->
+    <script>
+        // Prevent zooming in on input focus
+        document.addEventListener('touchstart', function (event) {
+            if (event.target.tagName === 'INPUT') {
+                event.preventDefault(); // Prevent default zooming behavior
+            }
+        });
+
+        // Redirect to main page on form submission
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Here you can add your login logic (e.g., validation, API calls)
+
+            // Redirect to the main page (change 'main.html' to your actual main page)
+            window.location.href = 'main.html'; 
+        }
+    </script>
+</head>
+<body>
+
+
+<div class="container">
+    <h1>Login</h1>
+    <form action="/login" method="post" class="signup-form">
+        <div class="form-group">
+            <label for="username"><b>Username</b></label>
+            <input name="username" placeholder="Enter username" id="username" type="text" required/>
+        </div>
+
+
+        <div class="form-group">
+            <label for="password"><b>Password</b></label>
+            <input name="password" placeholder="Enter password" id="password" type="password" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword"><b>Confirm Password</b></label>
+            <input name="confirmPassword" placeholder="Confirm password" id="confirmPassword" type="password" required/>
+        </div>
+
+        <button type="submit">Log In</button>
+    </form>
+    <p>Don't have an account? <a href="signup">Sign up here</a></p>
+    <p><a href="#">Forgot Password?</a></p>
+</div>
+</body>
+</html>

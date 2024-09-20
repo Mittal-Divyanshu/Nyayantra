@@ -6,6 +6,10 @@ body {
     background-color: #f4f1ef; /* Light background to keep the page bright */
     color: #333;
     text-align: center;
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.vzPelHOdTPUbbwWgo_5_2wHaFj&pid=Api&P=0&h=180);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Makes sure the image covers the entire background */
+    background-position: center 39%; 
 }
 
 /* Header Styles */
